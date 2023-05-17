@@ -3,7 +3,7 @@
 clone the github repository
 
 ### Steps to run the code
-npm install
+npm install --force
 
 npx json-server --watch db.json
 
