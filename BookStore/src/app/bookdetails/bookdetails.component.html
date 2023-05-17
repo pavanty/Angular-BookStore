@@ -1,0 +1,21 @@
+<body>
+  <div class="productimage row">
+    <div class="col-3">
+      <img src="{{ bookdetail?.image_url }}" alt="" />
+    </div>
+    <div class="bookdetails col-8">
+      <h1>{{ bookdetail?.title | uppercase }}</h1>
+      <h4>Author: {{ bookdetail?.authors }}</h4>
+      <h4>Description</h4>
+      <p>{{ bookdetail?.description }}</p>
+
+      <div class="rating" *ngIf="bookdetail?.rating">
+        <ngx-stars [color]="'#DEC20B'" class="rating-star" [readonly]="true" [maxStars]="5"
+          [initialStars]="bookdetail.rating"></ngx-stars>
+        <p>{{bookdetail.rating}}</p>
+      </div>
+
+      <button class="btn btn-primary" (click)="gobackpage()">Go Back</button>
+    </div>
+  </div>
+</body>
